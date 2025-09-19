@@ -1,3 +1,24 @@
+
+Orientação: A Empresa AÇO FERRO SERRANO Ltda necessita gerenciar o custo que terá com os presentes da festa de final de ano da empresa de seus funcionários no ano de 2025.
+A empresa adotou a seguinte política: 
+cada funcionário receberá 40,00, e para cada filho do funcionário menor de idade receberá um presente que custa 20,00 e para os filhos maiores de idade cada um receberá um presente de 10,00.
+matriz armazenará  o código do funcionário, total de filhos,  quantidade de filhos menores de idade , idade do funcionário e o tempo de empresa do funcionário. A Matriz deverá aceitar no máximo 100 funcionários.
+A leitura da Matriz deve ser implementada em C, assim como os cálculos solicitados abaixo.
+
+O custo geral e a média de custos por funcionário deve ser impressa no main. Assim deve-se utilizar a passagem de parâmetros por referência para o custo geral e return para a média de custos.
+
+Tabela com as regras para receber o valor dos presentes: 
+
+POR FUNCIONÁRIO                             >>       RECEBE 40,00
+
+CADA FILHO MENOR DE IDADE          >>       RECEBE 20,00
+
+CADA FILHO MAIOR DE IDADE           >>        RECEBE 10,00
+
+//
+
+Critérios na descrição do repositório!!!
+
 O Programa será avaliado da seguinte forma:
 
 a) (Peso 0,4). Defina a matriz o main e desenvolva um módulo que faça a leitura dos dados da matriz conforme tabela de exemplo descrita  acima. Leia o número de funcionários que deseja cadastrar , no máximo 100. Valide a leitura do número de funcionários. O número de funcionários deve sempre ser enviado para os módulos.
