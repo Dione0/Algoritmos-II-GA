@@ -1,0 +1,61 @@
+O Programa será avaliado da seguinte forma:
+
+a) (Peso 0,4). Defina a matriz o main e desenvolva um módulo que faça a leitura dos dados da matriz conforme tabela de exemplo descrita  acima. Leia o número de funcionários que deseja cadastrar , no máximo 100. Valide a leitura do número de funcionários. O número de funcionários deve sempre ser enviado para os módulos.
+
+b) (Peso 0,6). Desenvolva um módulo para calcular os valores conforme relatório a seguir.
+
+                              RELATORIO GERAL DO NÚMERO DOS CUSTOS COM PESSOAS E % DA FESTA
+
+TOTAL DE FUNCIONARIOS                                : 5
+
+TOTAL DE FILHOS MENORES DE IDADE            : 9
+
+TOTAL DE FILHOS MAIORES DE IDADE              : 5
+
+TOTAL GERAL DE FILHOS                                   : 14 
+
+ 
+
+MEDIA DO TOTAL DE FILHOS POR FUNCIONARIO.....:       2,80              
+
+MEDIA DE FILHOS MAIORES DE IDADE...........................:       1,00             % DE FILHOS MAIORES IDADE ..:  35,71%
+
+MEDIA DE FILHOS MENORES DE IDADE.........................:       1,80             % DE FILHOS MENORES IDADE. :  64,29%
+
+MÉDIA DE TEMPO DE EMPRESA DE TODOS FUNC.....:       6,2                 
+
+ 
+
+c) (Peso 0,6). Crie um módulo para calcular os custos da festa, conforme relatório abaixo. O módulo deve receber como parâmetros a matriz e o número de funcionários.
+
+CUSTO TOTAL SOMENTE COM OS FUNCIONÁRIOS        :          R$ 200,00
+
+CUSTO COM FILHOS MAIORES DE IDADE .......................    :           R$   50,00
+
+CUSTO COM FILHOS MENORES DE IDADE.......................   :           R$ 180,00
+
+CUSTO COM TODOS OS FILHOS...................................         :           R$ 230,00
+
+CUSTO GERAL(filhos+funcionários).......................................:          R$ 430,00
+
+MEDIA DE CUSTO POR FUNCIONÁRIO.................................:            R$   86,00
+
+ 
+
+O custo geral deve ser impresso no Main, assim deve-se utilizar passagem por referência para esta informação.
+
+A média de custo por funcionário deve ser impresso no main, utilizar return para esta informação.
+
+ 
+
+d) (Peso 0,4).  CALCULO DO BÔNUS EXTRA em um novo módulo- presente por tempo de serviço: cada funcionário receberá por cada ano de empresa um bônus conforme tabela abaixo. O cálculo do Bônus deverá ser calculado e impresso neste mesmo módulo. Utilizar o if encadeado.
+
+Para idade até 21 anos             – receberá 10,00 por cada ano de serviço na empresa
+
+Acima de 21 anos até 30 anos – receberá 15,00 por cada ano de serviço na empresa
+
+Acima de 30 anos                    – receberá 20,00 por cada ano de serviço na empresa 
+
+ 
+
+Armazene os valores calculados em um vetor float de no máximo tamanho 100. Imprima o vetor somente com os valores calculados no mesmo módulo ou se preferir em outro módulo.
