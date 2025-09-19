@@ -4,9 +4,14 @@
 #include<locale.h>
 
 
+
 int main(){
 	
+	//var
 	
+	
+	
+	//code
 	
 	
 	
