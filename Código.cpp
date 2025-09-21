@@ -48,10 +48,8 @@ void listar(int funcionarios[100][6], int *total){
 	
 	printf("\n===== LISTA DE FUNCIONÁRIOS =====\n");
 	printf("Matrícula | Idade | Tempo de Empresa | Total Filhos | Filhos Menores | Filhos Maiores\n");
-	for (j=0; j<*total; j++){ 
-   
-    printf("%8d | %5d | %15d | %12d | %14d | %13d \n", funcionarios[0][j],  funcionarios[1][j], funcionarios[2][j],  funcionarios[3][j], funcionarios[4][j],  funcionarios[5][j] );
-    
+	for (j=0; j<*total; j++){  
+    printf("%8d | %5d | %15d | %12d | %14d | %13d \n", funcionarios[0][j],  funcionarios[1][j], funcionarios[2][j],  funcionarios[3][j], funcionarios[4][j],  funcionarios[5][j] ); 
     }    
     
 }
@@ -59,13 +57,11 @@ void listar(int funcionarios[100][6], int *total){
 
 int main(){
 	
-	//var
-	
+	//var	
 	int filhos, opcao, maiores=0,menores=0;
 	int funcionarios[100][6] = {0};
 	int total= 0;
-	//code
-	
+	//code	
    setlocale(LC_ALL,"portuguese");
    
  do{
