@@ -15,6 +15,7 @@ void cadastrar(int funcionarios[100][6], int *total){
     scanf("%d", &matricula);
     funcionarios[i++][j] = matricula;
 
+
     printf("Digite quantos anos tem o funcionário: ");
     scanf("%d", &idade);
     funcionarios[i++][j] = idade;
@@ -26,7 +27,8 @@ void cadastrar(int funcionarios[100][6], int *total){
     printf("Digite quantos filhos ele(a) tem: ");
     scanf("%d", &filhos);
     funcionarios[i++][j] = filhos;
-
+    
+  
     for(int f = 0; f < filhos; f++){
         printf("Digite a idade do filho %d: ", f+1);
         scanf("%d", &idadef);
@@ -40,8 +42,13 @@ void cadastrar(int funcionarios[100][6], int *total){
     funcionarios[i++][j] = filhos_maiores;
 
     (*total)++;  
+    
+    if (*total >= 100) {
+    printf("Limite de funcionários atingido!\n");
+    return;
 }
-
+}
+	
 
 void listar(int funcionarios[100][6], int *total){
 	int j, i;
@@ -55,6 +62,7 @@ void listar(int funcionarios[100][6], int *total){
 }
 
 float calcular_custo(int funcionarios[100][6], int*total, float *custo){
+	
 	int j;
 	
 	float menores, maiores, custo_funcionario=0, media,valor, custo_total;
@@ -71,6 +79,7 @@ float calcular_custo(int funcionarios[100][6], int*total, float *custo){
 
 	
 }
+
 int main(){
 	
 	//var	
@@ -104,11 +113,11 @@ int main(){
 	media = calcular_custo(funcionarios, &total, &custo);
 	printf("\n=====================  CUSTO TOTAL DA FESTA  =========================");  	
 	printf("\n | CUSTO TOTAL | CUSTO POR FUNCIONÁRIO |");
-	printf("\n |     %.2f    |         %.2f          |", custo, media);
+	printf("\n |     %.2f    |         %.2f         |", custo, media);
+	printf("\n");
    	break;
    	case 4: 
    	return 0;
-   	break;
    	default:
    		printf("Opção invalida....");
    }
