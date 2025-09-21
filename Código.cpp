@@ -8,7 +8,7 @@ void cadastrar(int funcionarios[100][6], int *total){
     int j = *total;
     int matricula, idade, anos_empresa, filhos, filhos_menores=0, filhos_maiores=0, idadef;
 	
-//A MATRIZ SE ORGANIZA DA SEGUINTE MANEIRA:  i = matricula || idade funcionario ||tempo de empresa ||  n?mero filhos || filhos menores de idade, || maiores de idade
+//A MATRIZ SE ORGANIZA DA SEGUINTE MANEIRA:  i = matricula || idade funcionario ||tempo de empresa ||  número filhos || filhos menores de idade, || maiores de idade
 //   j = numero de funcion?rios                       [0]             [1]                 [2]               [3]                      [4]                   [5] 
 
     printf("Digite a matrícula do funcionário: ");
@@ -54,13 +54,30 @@ void listar(int funcionarios[100][6], int *total){
     
 }
 
+float calcular_custo(int funcionarios[100][6], int*total, float *custo){
+	int j;
+	
+	float menores, maiores, custo_funcionario=0, media,valor, custo_total;
 
+    *custo = 0; 
+
+    for(j = 0; j < *total; j++) {
+        menores = funcionarios[4][j] * 20;
+        maiores = funcionarios[5][j] * 10;
+        *custo += menores + maiores + 40;
+}
+    media = (*custo/ *total);
+	return media;	
+
+	
+}
 int main(){
 	
 	//var	
 	int filhos, opcao, maiores=0,menores=0;
 	int funcionarios[100][6] = {0};
 	int total= 0;
+	float custo, media;
 	//code	
    setlocale(LC_ALL,"portuguese");
    
@@ -84,7 +101,10 @@ int main(){
    	listar(funcionarios, &total);
    	break;
    	case 3:
-	   
+	media = calcular_custo(funcionarios, &total, &custo);
+	printf("\n=====================  CUSTO TOTAL DA FESTA  =========================");  	
+	printf("\n | CUSTO TOTAL | CUSTO POR FUNCIONÁRIO |");
+	printf("\n |     %.2f    |         %.2f          |", custo, media);
    	break;
    	case 4: 
    	return 0;
