@@ -82,9 +82,7 @@ int main(){
      
    switch(opcao){
    	case 1:	
-
-   	cadastrar(funcionarios, &total);  //  <--- teste de lógica do armazenamento do módulo cadastrar() "Dione"
-   
+   	cadastrar(funcionarios, &total);
    	break;
    	case 2:
    	listar(funcionarios, &total);
@@ -101,8 +99,8 @@ int main(){
    }while(opcao != 4);
 }
 
-   
-
+    
+  
 
 
 
