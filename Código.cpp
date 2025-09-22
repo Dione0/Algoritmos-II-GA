@@ -3,18 +3,26 @@
 #include<math.h>
 #include<locale.h>
 
-void cadastrar(int funcionarios[100][6], int *total){
+void cadastrar(int funcionarios[100][7], int *total){
     int i = 0;
     int j = *total;
     int matricula, idade, anos_empresa, filhos, filhos_menores=0, filhos_maiores=0, idadef;
+    float bonus;
+    
 	
-//A MATRIZ SE ORGANIZA DA SEGUINTE MANEIRA:  i = matricula || idade funcionario ||tempo de empresa ||  número filhos || filhos menores de idade, || maiores de idade
-//   j = numero de funcion?rios                       [0]             [1]                 [2]               [3]                      [4]                   [5] 
+//A MATRIZ SE ORGANIZA DA SEGUINTE MANEIRA:  i = matricula || idade funcionario ||tempo de empresa ||  número filhos || filhos menores de idade, || maiores de idade ||  Bonus
+//   j = numero de funcion?rios                       [0]             [1]                 [2]               [3]                      [4]                   [5]            [6]
+
+    if (*total >= 2) {
+    printf("Limite de funcionários atingido! Pressione Enter para continuar...");
+    getchar(); 
+    getchar(); 
+    return;
+    }
 
     printf("Digite a matrícula do funcionário: ");
     scanf("%d", &matricula);
     funcionarios[i++][j] = matricula;
-
 
     printf("Digite quantos anos tem o funcionário: ");
     scanf("%d", &idade);
@@ -40,28 +48,37 @@ void cadastrar(int funcionarios[100][6], int *total){
 
     funcionarios[i++][j] = filhos_menores;
     funcionarios[i++][j] = filhos_maiores;
-
-    (*total)++;  
     
-    if (*total >= 100) {
-    printf("Limite de funcionários atingido!\n");
-    return;
+    if (idade <= 21){ 
+        bonus = 10 * anos_empresa;
+    }else if (idade <= 30){
+	
+        bonus = 15 * anos_empresa;
+    }else{
+	
+        bonus = 20 * anos_empresa;
+    } 
+    funcionarios[i++][j] = bonus;
+ 
+	(*total)++; 
+   
 }
-}
+    
+
 	
 
-void listar(int funcionarios[100][6], int *total){
+void listar(int funcionarios[100][7], int *total){
 	int j, i;
 	
 	printf("\n===== LISTA DE FUNCIONÁRIOS =====\n");
 	printf("Matrícula | Idade | Tempo de Empresa | Total Filhos | Filhos Menores | Filhos Maiores\n");
 	for (j=0; j<*total; j++){  
-    printf("%8d | %5d | %15d | %12d | %14d | %13d \n", funcionarios[0][j],  funcionarios[1][j], funcionarios[2][j],  funcionarios[3][j], funcionarios[4][j],  funcionarios[5][j] ); 
+    printf("%8d | %5d | %15d | %12d | %14d | %13d | %14d,00 \n", funcionarios[0][j],  funcionarios[1][j], funcionarios[2][j],  funcionarios[3][j], funcionarios[4][j],  funcionarios[5][j], funcionarios[6][j] ); 
     }    
     
 }
 
-float calcular_custo(int funcionarios[100][6], int*total, float *custo){
+float calcular_custo(int funcionarios[100][7], int*total, float *custo){
 	
 	int j;
 	
@@ -83,8 +100,9 @@ float calcular_custo(int funcionarios[100][6], int*total, float *custo){
 int main(){
 	
 	//var	
+	int anos_empresa;
 	int filhos, opcao, maiores=0,menores=0;
-	int funcionarios[100][6] = {0};
+	int funcionarios[100][7] = {0};
 	int total= 0;
 	float custo, media;
 	//code	
